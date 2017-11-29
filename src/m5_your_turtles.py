@@ -29,6 +29,8 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
 import rosegraphics as rg
+import matplotlib
+
 window = rg.TurtleWindow()
 
 right_turtle = rg.SimpleTurtle('turtle')
@@ -36,20 +38,23 @@ left_turtle = rg.SimpleTurtle('turtle')
 
 left_turtle.pen = rg.Pen ('orange', 4)
 right_turtle.pen = rg.Pen('red', 4)
+
 size = 60
 
+right_turtle.draw_circle(size)
+left_turtle.draw_circle(size)
+
+
 for k in range(13):
-    right_turtle.pen_down()
-    right_turtle.draw_circle(size)
     right_turtle.pen_up()
     right_turtle.right(45)
     right_turtle.forward(10)
     right_turtle.left(45)
 
-    left_turtle.pen_down()
-    left_turtle.draw_circle(size)
     left_turtle.pen_up()
-    left_turtle.left(45)
-    left_turtle.forward(10)
     left_turtle.right(45)
+    left_turtle.forward(10)
+    left_turtle.left(45)
 size = -12
+
+
