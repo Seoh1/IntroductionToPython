@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Hyang Seo.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 # On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #  You should have RUN the PREVIOUS module and READ its code.
 #  (Do so now if you have not already done so.)
@@ -28,3 +28,28 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
+import rosegraphics as rg
+window = rg.TurtleWindow()
+
+right_turtle = rg.SimpleTurtle('turtle')
+left_turtle = rg.SimpleTurtle('turtle')
+
+left_turtle.pen = rg.Pen ('orange', 4)
+right_turtle.pen = rg.Pen('red', 4)
+size = 60
+
+for k in range(13):
+    right_turtle.pen_down()
+    right_turtle.draw_circle(size)
+    right_turtle.pen_up()
+    right_turtle.right(45)
+    right_turtle.forward(10)
+    right_turtle.left(45)
+
+    left_turtle.pen_down()
+    left_turtle.draw_circle(size)
+    left_turtle.pen_up()
+    left_turtle.left(45)
+    left_turtle.forward(10)
+    left_turtle.right(45)
+size = -12
